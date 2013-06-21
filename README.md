@@ -12,6 +12,8 @@ The definitions are taken from the latest draft, which is at the time of writing
 
 Clone / download this repository, or just download the `IndexedDB.js` file. Then tell your editor / IDE to treat the `IndexedDB.js` file as a library.
 
+A detailed instruction can be found [in this post](http://jensarps.de/2013/06/21/indexeddb-code-completion-and-type-hinting/).
+
 #Notes
 
 1. This repository does not contain enum definitions like `IDBTransactionMode` or `IDBRequestReadyState`.
