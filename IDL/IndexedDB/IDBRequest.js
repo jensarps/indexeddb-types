@@ -11,6 +11,7 @@ interface IDBRequest : EventTarget {
 */
 
 IDBRequest = function(){};
+IDBRequest.prototype = new EventTarget();
 
 /**
  * @type {*}

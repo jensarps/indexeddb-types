@@ -12,6 +12,7 @@ interface IDBTransaction : EventTarget {
 */
 
 IDBTransaction = function () {};
+IDBTransaction.prototype = new EventTarget();
 
 /**
  * @type {string}

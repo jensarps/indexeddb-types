@@ -14,6 +14,7 @@ interface IDBDatabase : EventTarget {
 */
 
 IDBDatabase = function () {};
+IDBDatabase.prototype = new EventTarget();
 
 /**
  * @type {string}
