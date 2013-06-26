@@ -30,3 +30,26 @@ DOMStringList.prototype.length = 0;
 DOMStringList.prototype.item = function (position) {
   return '';
 };
+
+
+EventTarget = function () {}
+
+/**
+ * @param {string} type
+ * @param {EventListener|Function} listener
+ * @param {boolean} [useCapture]
+ */
+EventTarget.prototype.addEventListener = function(type, listener, useCapture) {};
+
+/**
+ * @param {string} type
+ * @param {EventListener|Function} listener
+ * @param {boolean} [useCapture]
+ */
+EventTarget.prototype.removeEventListener = function(type, listener, useCapture) {};
+
+/**
+ * @param {Event} event
+ * @return {boolean}
+ */
+EventTarget.prototype.dispatchEvent = function(event) {};
