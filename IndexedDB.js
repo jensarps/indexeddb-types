@@ -75,6 +75,7 @@ interface IDBDatabase : EventTarget {
 */
 
 IDBDatabase = function () {};
+IDBDatabase.prototype = new EventTarget();
 
 /**
  * @type {string}
@@ -143,16 +144,7 @@ interface IDBEnvironment {
 };
 */
 
-/*
-Object.defineProperty(window, "indexedDB", {
-  enumerable: true,
-  configurable: false,
-  writable: false,
-  get: function() { return new IDBFactory(); }
-});
-*/
-
-window.indexedDB = new IDBFactory();
+indexedDB = new IDBFactory();
 /*
 interface IDBFactory {
     IDBOpenDBRequest open (DOMString name, [EnforceRange] optional unsigned long long version);
@@ -510,6 +502,7 @@ interface IDBRequest : EventTarget {
 */
 
 IDBRequest = function(){};
+IDBRequest.prototype = new EventTarget();
 
 /**
  * @type {*}
@@ -559,6 +552,7 @@ interface IDBTransaction : EventTarget {
 */
 
 IDBTransaction = function () {};
+IDBTransaction.prototype = new EventTarget();
 
 /**
  * @type {string}
@@ -602,3 +596,13 @@ IDBTransaction.prototype.oncomplete = null;
  * @type {Function(Event)}
  */
 IDBTransaction.prototype.onerror = null;
+/*
+  These vendor prefixed references are not part of any specification, but
+  exist just to avoid errors triggered by static analysis tools like JSHint.
+ */
+
+webkitIndexedDB = indexedDB;
+webkitIDBKeyRange = IDBKeyRange;
+
+mozIndexedDB = indexedDB;
+mozIDBKeyRange = IDBKeyRange;
