@@ -5,13 +5,4 @@ interface IDBEnvironment {
 };
 */
 
-/*
-Object.defineProperty(window, "indexedDB", {
-  enumerable: true,
-  configurable: false,
-  writable: false,
-  get: function() { return new IDBFactory(); }
-});
-*/
-
 window.indexedDB = new IDBFactory();
