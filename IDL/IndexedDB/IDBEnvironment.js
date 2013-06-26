@@ -5,4 +5,4 @@ interface IDBEnvironment {
 };
 */
 
-window.indexedDB = new IDBFactory();
+indexedDB = new IDBFactory();
